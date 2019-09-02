@@ -1,3 +1,6 @@
-﻿'use strict';
+﻿(function () {
+    'use strict';
 
-angular.module('bankApp',['bankController']);
+    var app = angular.module('bankApp', ['bankController']);
+
+})();
