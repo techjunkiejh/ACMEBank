@@ -2,13 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Bank Application</title>
-    <link rel="stylesheet" type="text/css" href="app.css">
+    <title>Acme Bank</title>
+    <link href="js/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/app.css">
 </head>
 <body ng-app="bankApp" ng-controller="bankController">
-    {{bankAppName}}
+    <div class="row">
+        <div class="col-sm-8 offset-2">
+            <div class="jumbotron bg-info" ng-repeat="account in accounts">
+                <div class="col-sm-4">
+                    <span class="account-heading">{{account.type}}</span><br />
+                    <span class="italic-text-label">Balance:&nbsp;</span>{{account.balance | currency}}</span>
+                </div>
+                <div class="offset-8">
+                    <button class="btn btn-primary">Transfer</button>&nbsp;&nbsp;
+                    <button class="btn btn-primary">Deposit</button>&nbsp;&nbsp;
+                    <button class="btn btn-primary">Widthdrawal</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/lib/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/lib/angular/angular.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
+    <script src="js/models/account.js"></script>
     <script type="text/javascript" src="js/controllers/bankController.js"></script>
 </body>
 </html>

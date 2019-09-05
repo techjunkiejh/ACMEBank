@@ -1,4 +1,4 @@
-﻿(function () {
+﻿
     function Account(balance, type) {
         this.balance = balance;
         this.type = type;
@@ -44,4 +44,3 @@
     Premium.prototype.rebalance = function () {
         this.balance += this.balance * .05;
     }
-}());
